@@ -10,17 +10,12 @@
         }
         
       }
-      document.addEventListener("DOMContentLoaded",
-      function bind( ){ //after DOMContentLoaded this event finish , to the function after.
-        document.getElementById("b2").onclick=adder;
-        }
-      )
       let name="";
       document.addEventListener("DOMContentLoaded",function(){
         document.querySelector("form").onsubmit(
           function(){
             const name=document.querySelector('#name').value;
-            alert("${name}")
+            alert(`${name}`)
             document.getElementById("hd1").innerHTML="hello"+name;
            }
         )
@@ -29,11 +24,6 @@
   </script>
 </head>
   <body>
-    <h1>0</h1>
-    <button id="b1" onclick="bind()" >bind the adder!</button>
-    <button id="b2" >exec adder!</button>
-    <!-- <button id="b2"onclick="adder() >exec adder!</button>  this after bind() exec  -->
-
     <h1 id="hd1">hello</h1>
     <form id="form1" >
       <input id="name" placeholder="name" type="text">
