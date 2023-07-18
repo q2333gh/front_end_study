@@ -8,11 +8,19 @@
         if(sum%5===0){
           alert(`the sum is now ${sum}`);
         }
+        
       }
+      document.addEventListener("DOMContentLoaded",
+      function bind( ){
+        document.getElementsByName("b2").onclick=adder;
+      }
+      )  
+      
   </script>
 </head>
   <body>
     <h1>0</h1>
-    <button onclick="adder()">add me !</button>
+    <button name="b1" onclick="bind()" >bind the adder!</button>
+    <button name="b2" >exec adder!</button>
   </body>
 </html>
