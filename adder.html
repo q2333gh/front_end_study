@@ -11,8 +11,8 @@
         
       }
       document.addEventListener("DOMContentLoaded",
-      function bind( ){
-        document.getElementsByName("b2").onclick=adder;
+      function bind( ){ //after DOMContentLoaded this event finish , to the function after.
+        document.getElementById("b2").onclick=adder;
       }
       )  
       
@@ -20,7 +20,7 @@
 </head>
   <body>
     <h1>0</h1>
-    <button name="b1" onclick="bind()" >bind the adder!</button>
-    <button name="b2" >exec adder!</button>
+    <button id="b1" onclick="bind()" >bind the adder!</button>
+    <button id="b2" >exec adder!</button>
   </body>
 </html>
